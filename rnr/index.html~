@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title>Renarrator</title>
+ 
+ 
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    
+ <script type="text/javascript">
+    function wget()
+    {
+    foruri = document.getElementById("inputurl").value;
+    if(foruri.substring(0,7) == "http://") {
+   
+    
+    window.open("http://web.iiit.ac.in/~sonali.goyal/RNR/?foruri=" + encodeURIComponent(foruri));
+    }
+    
+    else if (foruri.substring(0,8) == "https://") {
+        window.open("http://web.iiit.ac.in/~sonali.goyal/RNR/?foruri=" + encodeURIComponent(foruri));
+    }
+    else {
+    alert("Please enter 'HTTP' protocoled URL");
+    }
+    }
+   
+</script>
+ 
+</head>
+ 
+<body>
+ 
+    <div class="container">
+        <div class="header">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation" class="active"><a href="#">Home</a>
+                    </li>
+                    <li role="presentation"><a href="#">Sign In</a>
+                    </li>
+                    <li role="presentation"><a href="http://web.iiit.ac.in/~sonali.goyal/RNR/showSignUp">Sign Up</a>
+                    </li>
+                </ul>
+            </nav>
+            <h3 class="text-muted">Renarrator</h3>
+        </div>
+ 
+       
+            
+            <p class="lead"></p>
+             
+   <h2> Enter a URL  </h2>
+  <input id="inputurl" placeholder="Enter the url here" />
+  <button type="submit" class="btn btn-primary btn-sm" onClick="wget()"> Get The URL</button>
+<br/>
+ <a href="http://web.iiit.ac.in/~sonali.goyal/RNR/highlight">Annotate</a>
+           
+   
+        
+ 
+        <footer class="footer">
+            <p>&copy; Vlabs</p>
+        </footer>
+ 
+    </div>
+</body>
+ 
+</html>

@@ -1,0 +1,4 @@
+Flask
+gdata==2.0.17
+lxml
+pymongo

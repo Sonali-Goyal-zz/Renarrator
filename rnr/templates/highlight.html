@@ -1,0 +1,79 @@
+<html>
+<head>
+<title> NODE</title>
+<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="../static/js/jquery-2.2.0.min.js"></script>
+
+<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+
+
+
+<script type="text/javascript">
+var data1;
+    //<![CDATA[
+        $(window).load(function(){ 
+        $('html').children().css('background-color','rgba(42,42,42,0.2)');
+$('body').children().hover(
+    function(){
+        $(this).css('background-color','#fff');
+    },
+    
+    function(){
+        $(this).css('background-color','rgba(42,42,42,0.2)');
+    });
+    $('.modal').modal('hide');
+    $('body').children().click(
+    function(){
+       var data=$(this).text();
+      data1=$(this);
+$(this).attr('contenteditable','true');
+    });
+    $('#btn').click(function() {
+    var data=data1.text();
+    data1.text(data);
+    alert(data1.html());
+     });
+    });
+    //]]>
+   
+</script>
+
+</head>
+<body>
+<h1>Page title</h1>
+<ul>
+    <li>Home</li>
+    <li>Other pages:
+        <ul>
+            <li>other one</li>
+            <li>other two</li>
+        </ul>
+    </li>
+</ul>
+
+<div class="container">
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan metus nec enim consectetur at molestie leo faucibus. Vestibulum sollicitudin fringilla neque, eleifend mattis tortor mollis eu. Etiam nec risus est, in dignissim ipsum. Donec vehicula ornare felis elementum commodo. Nulla quis lacus nisi. Sed dignissim lobortis dui in vehicula. Donec suscipit dignissim ante non malesuada. Duis scelerisque aliquam est a fermentum. Vivamus risus neque, pharetra ac vehicula bibendum, eleifend vel arcu. Vivamus ut tellus quis enim tincidunt mattis non vitae urna. Etiam tortor nunc, fermentum eget cursus nec, accumsan non libero.</p>
+
+    <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan metus nec enim consectetur at molestie leo faucibus. Vestibulum sollicitudin fringilla neque, eleifend mattis tortor mollis eu. Etiam nec risus est, in dignissim ipsum. Donec vehicula ornare felis elementum commodo.</blockquote>
+    <p>Nulla quis lacus nisi. Sed dignissim lobortis dui in vehicula. Donec suscipit dignissim ante non malesuada. Duis scelerisque aliquam est a fermentum. Vivamus risus neque, pharetra ac vehicula bibendum, eleifend vel arcu. Vivamus ut tellus quis enim tincidunt mattis non vitae urna. Etiam tortor nunc, fermentum eget cursus nec, accumsan non libero.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan metus nec enim consectetur at molestie leo faucibus. Vestibulum sollicitudin fringilla neque, eleifend mattis tortor mollis eu. Etiam nec risus est, in dignissim ipsum. Donec vehicula ornare felis elementum commodo. Nulla quis lacus nisi. Sed dignissim lobortis dui in vehicula. Donec suscipit dignissim ante non malesuada. Duis scelerisque aliquam est a fermentum. Vivamus risus neque, pharetra ac vehicula bibendum, eleifend vel arcu. Vivamus ut tellus quis enim tincidunt mattis non vitae urna. Etiam tortor nunc, fermentum eget cursus nec, accumsan non libero.</p>
+    <button id="btn" class="btn btn-lg btn-primary btn-block" type="button">Save</button>
+ <div class="modal fade" role="dialog" aria-labelledby="myModalLabel" style="display: none;">
+ <div class="modal-dialog">
+    <div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+<h3 id = "modal-header-content" ></h3>
+</div>
+<div class="modal-body">
+</div>
+<div class="modal-footer">
+<a href="#" class="btn" data-dismiss="modal">Close</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

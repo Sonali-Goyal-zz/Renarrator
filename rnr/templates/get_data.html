@@ -1,0 +1,44 @@
+<html>
+<head>
+{{head_data | safe}}
+<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="../static/js/jquery-2.2.0.min.js"></script>
+
+<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+
+
+
+<script type="text/javascript">
+var data1;
+    //<![CDATA[
+        $(window).load(function(){ 
+        $('html').children().css('background-color','rgba(42,42,42,0.2)');
+$('body').children().hover(
+    function(){
+        $(this).css('background-color','#fff7');
+    },
+    
+    function(){
+        $(this).css('background-color','rgba(42,42,42,0.2)');
+    });
+    $('body').children().click(
+    function(){
+       var data=$(this).text();
+      data1=$(this);
+$(this).attr('contenteditable','true');
+    });
+   $('#btn').click(function() {
+    var data=data1.text();
+    data1.text(data);
+     });
+    });
+    //]]>
+   
+</script>
+
+</head>
+<body
+{{body_data | safe}}
+ <button id="btn" class="btn btn-lg btn-primary btn-block" type="button">Save</button>
+</body>
+</html>

@@ -1,0 +1,45 @@
+#content {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0.4em;
+    border-radius: 1em;
+    border: 1px solid #ccc;
+}
+
+h1 {
+    font-size: 2em;
+    font-family: sans-serif;
+    font-style: italic;
+}
+
+ul {
+    width: 80%;
+    margin: 0 auto 1em auto;
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+    width: 45%;
+}
+
+ul li ul {
+    display: none;
+    position: absolute;
+    top: 1em;
+    left: 0;
+}
+
+ul li ul li {
+    width: 100%;
+    display: list-item;
+    background-color: #fff;
+}
+
+ul li:hover ul {
+    display: block;
+}
+
+li:hover {
+    background-color: #ffa;
+}
